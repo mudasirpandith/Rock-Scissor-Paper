@@ -26,7 +26,6 @@ export default function Home() {
   const [computerSelected, setComputerSelected] = useState(def2);
   const [yourscore, setYourScore] = useState(0);
   const [tiescore, setTieScore] = useState(0);
-  const [computerscore, setComputerscore] = useState(0);
   const [totalgames, setTotalgames] = useState(0);
   const list = [paper, scissors, rock];
 
@@ -61,9 +60,7 @@ export default function Home() {
     setUserSelected(def1);
     setComputerSelected(def2);
   }
-  function setComputer() {
-    setComputerscore(computerscore + 1);
-  }
+
   return (
     <>
       <div className="body">
