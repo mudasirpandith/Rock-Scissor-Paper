@@ -80,14 +80,14 @@ export default function Home() {
           <Box sx={{ flexGrow: 2 }}>
             <Grid container spacing={1}>
               <Grid item xs={6}>
-                <h3>You selected</h3>
+                <h3>You </h3>
                 <Item>
                   {" "}
                   <img className="game-images" src={userSelected} alt="paper" />
                 </Item>
               </Grid>
               <Grid item xs={6}>
-                <h3>Computer selected</h3>
+                <h3>Computer</h3>
                 <Item>
                   <img
                     className="game-images"
