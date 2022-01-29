@@ -1,0 +1,11 @@
+{
+  "short_name": "Kaeshir Dictionary",
+  "name": "Kaeshir Dictionary Created By Mudasir Pandith",
+  
+  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "color":"blue",
+  "background_color": "orange"
+}

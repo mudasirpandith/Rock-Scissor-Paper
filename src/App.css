@@ -1,0 +1,126 @@
+.nav-link {
+  text-decoration: none;
+}
+.developer-img {
+  width: 200px;
+  height: auto;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+.navIcon {
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0px 10px;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+}
+.app-title {
+  font-size: 30px;
+  color: white;
+  right: 20px;
+  text-align: right;
+  z-index: 1;
+  margin-top: -22px;
+  width: 100%;
+  padding: 20px;
+  margin-right: -20px;
+  background-color: rgb(250, 119, 119);
+  position: fixed;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  margin: auto;
+}
+.searchbar {
+  margin: auto;
+  text-align: center;
+  height: 40px;
+  border-radius: 30px;
+  color: black;
+  width: 400px;
+  font-size: 20px;
+}
+
+.link {
+  margin: 20px;
+  font-size: 25px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  background-color: #b9e4b9;
+}
+.link:hover {
+  background-color: red;
+}
+.link:active {
+  background-color: white;
+}
+.web-link {
+  margin: 20px;
+  font-size: 25px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.web-app-title {
+  display: inline-block;
+  margin-right: 50%;
+  color: red;
+}
+.home-word-box {
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px rgb(75, 74, 74);
+  margin: 10px;
+  font: 1.1em sans-serif;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.home-index-change-btn {
+  margin-top: -250px;
+  margin-right: 20px;
+  outline: none;
+  background-color: green;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  bottom: white;
+  border-radius: 50%;
+  padding: 20px;
+  float: right;
+}
+.button-link {
+  text-align: right;
+  background-color: rgb(228, 225, 225);
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 30px;
+  margin: auto;
+}
+.developer {
+  color: #008000;
+  padding: 10px;
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+}
+
+.word-title {
+  color: red;
+  text-align: center;
+}
+.word-detail {
+  color: grey;
+}
+.word-icon {
+  padding: 0 20px;
+}

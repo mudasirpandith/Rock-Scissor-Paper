@@ -1,0 +1,55 @@
+.body {
+  text-align: center;
+  border: solid;
+  padding: 20px;
+  margin: 20px auto;
+}
+.heading {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+img {
+  width: 280px;
+  height: 480px;
+}
+.closebtn {
+  position: absolute;
+  bottom: 10px;
+}
+.game-images {
+  width: 100px;
+  image-rendering: auto;
+  padding: 10px;
+  height: auto;
+  border: white 3px;
+  border-radius: 50%;
+  border: black solid;
+}
+.selectImage {
+  text-align: center;
+}
+
+.scorecard {
+  text-align: center;
+  padding: 10px;
+  margin: 20px 20px;
+}
+
+.score-title {
+  position: relative;
+  left: 0;
+  font-size: 40px;
+  display: inline-block;
+}
+.select-game-images {
+  margin-top: 20px;
+  border: black solid;
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  background-color: wheat;
+}
