@@ -1,8 +1,6 @@
-# Dictionary developed in React having 5000 word in database  with search bar 
-<a href="https://kaeshirdictionary.vercel.app/"> Live❤️ </a> 
-Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
