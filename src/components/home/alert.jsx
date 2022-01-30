@@ -8,7 +8,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import ClearIcon from "@mui/icons-material/Clear";
 import "./home.css";
-import rules from "../images/rules.png";
+import rules from "../images/rules.jpg";
 export default function ResponsiveDialog(props) {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();

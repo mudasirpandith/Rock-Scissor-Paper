@@ -1,55 +1,64 @@
 .body {
   text-align: center;
-  border: solid;
-  padding: 20px;
-  margin: 20px auto;
 }
 .heading {
+  margin-top: -20px;
+  font-weight: 600;
+  padding-top: 20px;
   font-family: "Pacifico", cursive;
-  font-size: 3rem;
-  font-weight: 400;
+  background: -webkit-linear-gradient(red, blue);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
+p,
+h1,
+h2,
+h3,
+h4 {
+  color: hsl(217, 16%, 45%);
+}
 img {
-  width: 280px;
-  height: 480px;
+  width: 100%;
+  height: 500px;
 }
 .closebtn {
-  position: absolute;
   bottom: 10px;
 }
 .game-images {
-  width: 100px;
-  image-rendering: auto;
+  width: 70px;
   padding: 10px;
   height: auto;
   border: white 3px;
   border-radius: 50%;
   border: black solid;
-}
-.selectImage {
-  text-align: center;
+
+  background-image: radial-gradient(red, blue);
 }
 
-.scorecard {
-  text-align: center;
-  padding: 10px;
-  margin: 20px 20px;
-}
-
-.score-title {
-  position: relative;
-  left: 0;
-  font-size: 40px;
-  display: inline-block;
-}
 .select-game-images {
-  margin-top: 20px;
   border: black solid;
   border-radius: 50%;
-  width: 100px;
-  height: auto;
-  padding: 10px;
-  margin: 10px;
-  background-color: wheat;
+  height: 70px;
+  width: auto;
+  padding: 2px;
+  background-image: radial-gradient(red, blue);
+}
+.yscore {
+  padding: 0 10px;
+  color: green;
+  float: left;
+}
+.cscore {
+  color: red;
+  float: right;
+  padding: 0 10px;
+}
+.tscore {
+  padding: 0 10px;
+}
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }

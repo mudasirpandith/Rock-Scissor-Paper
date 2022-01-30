@@ -2,5 +2,7 @@ html,
 body {
   margin: 0;
   width: 100%;
-  background-image: "#C1DEAE";
+  height: 90%;
+  background-color: #18183d;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }

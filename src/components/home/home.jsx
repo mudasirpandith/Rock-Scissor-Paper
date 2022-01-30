@@ -17,8 +17,8 @@ import Box from "@mui/material/Box";
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(2),
+  backgroundColor: "#161638",
   margin: "10px -2px",
-  backgroundColor: "#219F94",
   color: theme.palette.text.secondary,
 }));
 export default function Home() {
@@ -26,30 +26,22 @@ export default function Home() {
   const [computerSelected, setComputerSelected] = useState(def2);
   const [yourscore, setYourScore] = useState(0);
   const [tiescore, setTieScore] = useState(0);
-  const [computerscore, setComputerscore] = useState(0);
-  const [totalgames, setTotalgames] = useState(0);
+  const [computerscore, setComputerScore] = useState(0);
   const list = [paper, scissors, rock];
 
   function setPaper() {
     setUserSelected(paper);
 
-    setTotalgames(totalgames + 1);
     setComputerSelected(list[Math.floor(Math.random() * list.length)]);
-    console.log(computerSelected);
   }
   const setRock = () => {
     setUserSelected(rock);
-    setTotalgames(totalgames + 1);
     setComputerSelected(list[Math.floor(Math.random() * list.length)]);
-    console.log(computerSelected);
   };
   const setScissors = () => {
     setUserSelected(scissors);
 
-    setTotalgames(totalgames + 1);
     setComputerSelected(list[Math.floor(Math.random() * list.length)]);
-
-    console.log(computerSelected);
   };
   function setAgain() {
     setYourScore(yourscore + 1);
@@ -61,9 +53,12 @@ export default function Home() {
     setUserSelected(def1);
     setComputerSelected(def2);
   }
-  function setComputer() {
-    setComputerscore(computerscore + 1);
+  function setAgainComputer() {
+    setComputerScore(computerscore + 1);
+    setUserSelected(def1);
+    setComputerSelected(def2);
   }
+
   return (
     <>
       <div className="body">
@@ -71,11 +66,9 @@ export default function Home() {
         <div className="scorecard">
           <Grid>
             <Item>
-              <h3 className="score-title">Score</h3>
-              <p className="scores">
-                You won:{yourscore}/{totalgames}
-              </p>
-              <p className="scores">Tie:{tiescore}</p>{" "}
+              <p className="yscore">You won:{yourscore}</p>
+              <p className="cscore">Computer won:{computerscore}</p>
+              <p className="tscore">Tie:{tiescore}</p>{" "}
             </Item>
           </Grid>
         </div>
@@ -83,14 +76,14 @@ export default function Home() {
           <Box sx={{ flexGrow: 2 }}>
             <Grid container spacing={1}>
               <Grid item xs={6}>
-                <h3>You selected</h3>
+                <h4>You</h4>
                 <Item>
                   {" "}
                   <img className="game-images" src={userSelected} alt="paper" />
                 </Item>
               </Grid>
               <Grid item xs={6}>
-                <h3>Computer selected</h3>
+                <h4>Computer</h4>
                 <Item>
                   <img
                     className="game-images"
@@ -102,9 +95,13 @@ export default function Home() {
               {userSelected === computerSelected ? (
                 <Grid item xs={12}>
                   <Item>
-                    <h1>GAME TIED</h1>
-                    <Button variant="outlined" onClick={setAgainTie}>
-                      play Again
+                    <h1>Tie</h1>
+                    <Button
+                      color="inherit"
+                      variant="outlined"
+                      onClick={setAgainTie}
+                    >
+                      Play Again
                     </Button>
                   </Item>
                 </Grid>
@@ -115,57 +112,81 @@ export default function Home() {
                   (userSelected === paper && computerSelected === rock) ? (
                     <Grid item xs={12}>
                       <Item>
-                        <h1 style={{ color: "green" }}>You Won the Game</h1>
-                        <Button variant="outlined" onClick={setAgain}>
+                        <h1 style={{ color: "green" }}>You Won</h1>
+                        <Button
+                          color="success"
+                          variant="outlined"
+                          onClick={setAgain}
+                        >
+                          Play Again
+                        </Button>
+                      </Item>
+                    </Grid>
+                  ) : (computerSelected === scissors &&
+                      userSelected === paper) ||
+                    (computerSelected === rock && userSelected === scissors) ||
+                    (computerSelected === paper && userSelected === rock) ? (
+                    <Grid item xs={12}>
+                      <Item>
+                        <h1 style={{ color: "red" }}>Computer Won</h1>
+                        <Button
+                          color="error"
+                          variant="outlined"
+                          onClick={setAgainComputer}
+                        >
                           Play Again
                         </Button>
                       </Item>
                     </Grid>
                   ) : (
-                    <Grid item xs={12}>
-                      <h3>Select AnyOne</h3>
-                      <Item>
-                        <div className="selectImage">
-                          <Box sx={{ "& > :not(style)": { m: 5 } }}>
-                            {" "}
-                            <Fab onClick={setPaper}>
-                              <img
-                                className="select-game-images"
-                                src={paper}
-                                alt="paper"
-                              />
-                            </Fab>
-                            <Fab onClick={setRock}>
-                              <img
-                                className="select-game-images"
-                                src={rock}
-                                alt="paper"
-                              />
-                            </Fab>
-                            <Fab onClick={setScissors}>
-                              <img
-                                className="select-game-images"
-                                src={scissors}
-                                alt="paper"
-                              />
-                            </Fab>
-                          </Box>
-                        </div>
-                      </Item>
-                    </Grid>
+                    <>
+                      <Grid item xs={12}>
+                        <p>Select </p>
+                        <Item>
+                          <div className="selectImage">
+                            <Box sx={{ "& > :not(style)": { m: 2 } }}>
+                              {" "}
+                              <Fab onClick={setPaper}>
+                                <img
+                                  className="select-game-images"
+                                  src={paper}
+                                  alt="paper"
+                                />
+                              </Fab>
+                              <Fab onClick={setRock}>
+                                <img
+                                  className="select-game-images"
+                                  src={rock}
+                                  alt="paper"
+                                />
+                              </Fab>
+                              <Fab onClick={setScissors}>
+                                <img
+                                  className="select-game-images"
+                                  src={scissors}
+                                  alt="paper"
+                                />
+                              </Fab>
+                            </Box>
+                          </div>
+                        </Item>
+                      </Grid>
+                    </>
                   )}{" "}
                 </>
               )}{" "}
             </Grid>
           </Box>
         </center>
-        <div style={{ padding: "20px" }}>
-          <ResponsiveDialog />
-        </div>
-        developed by{" "}
-        <a href="https://www.linkedin.com/in/mudasir-pandith-a04b04202/">
-          Mudasir Ahmad Pandith
-        </a>
+        <footer>
+          <div style={{ padding: "20px" }}>
+            <ResponsiveDialog />
+          </div>
+          developed by{" "}
+          <a href="https://www.linkedin.com/in/mudasir-pandith-a04b04202/">
+            Mudasir Ahmad Pandith
+          </a>
+        </footer>
       </div>
     </>
   );
