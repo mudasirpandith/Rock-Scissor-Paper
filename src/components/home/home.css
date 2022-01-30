@@ -41,7 +41,8 @@ img {
   border-radius: 50%;
   height: 70px;
   width: auto;
-  padding: 10px 2px;
+  margin: 10px 0;
+  padding: 8px;
   background-image: radial-gradient(red, blue);
 }
 .yscore {
